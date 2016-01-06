@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MarcoDeMeterApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--TEXT VIEWS-->
+    <string name="textview_updating_title">Data: </string>
+    <string name="textview_updating_variable">not live</string>
+    <string name="textview_last_updated">Last updated: 20.000BC</string>
+
+    <string name="textField_currentElectrUsage">000000 W</string>
+    <string name="textField_totalLowElectr">000000 kWh</string>
+    <string name="textField_totalHighElectr">000000 kWh</string>
+    <string name="textField_totalGas">000000 m3</string>
+
+
+
+
+    <!--BUTTON TEXT-->
+    <string name="button_start_updating">Start Updating</string>
+    <string name="button_stop_updating">Stop Updating</string>
+</resources>

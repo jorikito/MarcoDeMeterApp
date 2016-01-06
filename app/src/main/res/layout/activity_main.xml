@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ff216b96">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/control_layout">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_updating_title"
+                android:id="@+id/textView_updating_title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/textView_updating_variable"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_updating_variable"
+                android:id="@+id/textView_updating_variable"
+                android:textSize="30dp"
+                android:textColor="#ffff1717"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="90dp"
+                android:layout_marginEnd="90dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_start_updating"
+                android:id="@+id/button_start_updating"
+                android:layout_below="@+id/textView_updating_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="57dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_stop_updating"
+                android:id="@+id/button_stop_updating"
+                android:layout_gravity="center_vertical"
+                android:layout_alignTop="@+id/button_start_updating"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_last_updated"
+                android:id="@+id/textView_last_updated"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/information_layout"
+        android:layout_below="@+id/control_layout"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_currentElectrUsage">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000 kWh"
+                android:id="@+id/textField_currentElectrUsage"
+                android:focusableInTouchMode="true"
+                android:textSize="60dp"
+                android:textColor="#fff" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_tariffIndicators"
+                android:layout_toRightOf="@+id/textField_currentElectrUsage"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="hi"
+                    android:id="@+id/textView_hiTariffIndicator"
+                    android:layout_toEndOf="@+id/layout_currentElectrUsage"
+                    android:textSize="25dp"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentStart="false"
+                    android:gravity="center"
+                    android:background="#ff0000"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="lo"
+                    android:id="@+id/textView_loTariffIndicator"
+                    android:layout_toEndOf="@+id/layout_currentElectrUsage"
+                    android:textSize="25dp"
+                    android:layout_below="@+id/textView_hiTariffIndicator"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="#00ec04" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_alignRight="@+id/relativeLayout"-->
+        <!--android:layout_alignEnd="@+id/relativeLayout"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_below="@+id/control_layout">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/scrollView"-->
+            <!--android:id="@+id/relativeLayout"-->
+            <!--android:paddingTop="20dp">-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:id="@+id/information_layout"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/scrollView"-->
+                <!--android:layout_marginTop="30dp">-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/layout_currentUsage"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Current usage:"-->
+                        <!--android:id="@+id/textView_currentUsage_title"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:layout_gravity="right" />-->
+
+                    <!--<TextView android:text="@string/textField_currentElectrUsage" android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/textField_currentElectrUsage"-->
+                        <!--android:textSize="25dp"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="#69737373"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:width="200dp"-->
+                        <!--android:gravity="right"-->
+                        <!--android:textColor="#ffffffff" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/layout_totalLow"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_below="@+id/layout_currentUsage"-->
+                    <!--android:layout_alignLeft="@+id/layout_currentUsage"-->
+                    <!--android:layout_alignStart="@+id/layout_currentUsage"-->
+                    <!--android:layout_marginTop="23dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Total low tariff:"-->
+                        <!--android:id="@+id/textView_electrTotalLow"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:layout_gravity="right" />-->
+
+                    <!--<TextView-->
+                        <!--android:text="@string/textField_totalLowElectr"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/textField_totalLowElectr"-->
+                        <!--android:textSize="25dp"-->
+                        <!--android:background="#69737373"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:width="200dp"-->
+                        <!--android:gravity="right"-->
+                        <!--android:textColor="#ffffffff"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_centerHorizontal="true" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/layout_totalHigh"-->
+                    <!--android:layout_alignParentBottom="false"-->
+                    <!--android:layout_alignStart="@+id/layout_totalLow"-->
+                    <!--android:layout_marginTop="163dp"-->
+                    <!--android:layout_alignParentEnd="false"-->
+                    <!--android:layout_alignParentStart="false">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Total high tariff:"-->
+                        <!--android:id="@+id/textView_electrTotalHigh"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:layout_gravity="right" />-->
+
+                    <!--<TextView-->
+                        <!--android:text="@string/textField_totalHighElectr"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/textField_totalHighElectr"-->
+                        <!--android:textSize="25dp"-->
+                        <!--android:background="#69737373"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:width="200dp"-->
+                        <!--android:gravity="right"-->
+                        <!--android:textColor="#ffffffff"-->
+                        <!--android:layout_marginBottom="44dp"-->
+                        <!--android:layout_alignBottom="@+id/scrollView"-->
+                        <!--android:layout_centerHorizontal="true" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/layout_totalGas"-->
+                    <!--android:layout_alignParentBottom="false"-->
+                    <!--android:layout_alignStart="@+id/layout_totalLow"-->
+                    <!--android:layout_marginTop="245dp"-->
+                    <!--android:layout_alignParentEnd="false"-->
+                    <!--android:layout_alignParentStart="false" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Total gas usage:"-->
+                        <!--android:id="@+id/textView_totalGas_title"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:layout_gravity="right" />-->
+
+                    <!--<TextView-->
+                        <!--android:text="@string/textField_totalGas"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/textView_totalGas"-->
+                        <!--android:textSize="25dp"-->
+                        <!--android:background="#69737373"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:width="200dp"-->
+                        <!--android:gravity="right"-->
+                        <!--android:textColor="#ffffffff"-->
+                        <!--android:layout_marginBottom="44dp"-->
+                        <!--android:layout_alignBottom="@+id/scrollView"-->
+                        <!--android:layout_centerHorizontal="true" />-->
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+        <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+
+</RelativeLayout>
